@@ -2,12 +2,21 @@ services:
   - type: web
     name: flask-blockchain-app
     env: python
+    rootDir: blockchain
     buildCommand: ""
     startCommand: gunicorn app:app
     envVars:
       - key: FLASK_ENV
         value: production
-    buildFilter:
-      paths:
-        - blockchain/**
+
+  - type: worker
+    name: telegram-bot
+    env: python
     rootDir: blockchain
+    startCommand: python telegram_blockchain_bot.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: TELEGRAM_API_TOKEN
+        value: 7741079240:AAES08fjkZQBv_aH6AZaqFaAg7fyDyijryc
+
