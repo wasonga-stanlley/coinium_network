@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Mine a New Block</h2>
+    <input type="text" id="miner-address" placeholder="Your Wallet Address">
+    <button onclick="mineBlock()">Mine</button>
+    <p id="mine-status"></p>
+
+    <script>
+        function mineBlock() {
+            let minerAddress = document.getElementById("miner-address").value;
+            fetch("/mine_block", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ miner_address: minerAddress })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("mine-status").innerText = 
+                    data.message || data.error;
+            });
+        }
+    </script>
+{% endblock %}

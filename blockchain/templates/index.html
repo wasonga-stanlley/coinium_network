@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coinium Network</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Coinium Network</h1>
+    <h3>Powering The Future Of Decentralization</h3>
+
+    <!-- Wallet Section -->
+    <section class="card">
+      <h2>Wallets</h2>
+      <button id="createWalletBtn">Create New Wallet</button>
+      <button id="listWalletsBtn" class="secondary">List Wallets</button>
+      <div id="walletsOutput" class="output"></div>
+    </section>
+
+    <!-- Transaction Section -->
+    <section class="card">
+      <h2>Create Transaction</h2>
+      <form id="transactionForm">
+        <input type="text" id="sender" placeholder="Sender Wallet Address" required />
+        <input type="text" id="recipient" placeholder="Recipient Wallet Address" required />
+        <input type="number" step="any" id="amount" placeholder="Amount" required />
+        <button type="submit">Submit Transaction</button>
+      </form>
+      <div id="transactionOutput" class="output"></div>
+    </section>
+
+    <!-- Mining Section -->
+    <section class="card">
+      <h2>Mine Block</h2>
+      <form id="mineForm">
+        <input type="text" id="miner_address" placeholder="Miner Wallet Address" required />
+        <button type="submit">Mine Pending Transactions</button>
+      </form>
+      <div id="mineOutput" class="output"></div>
+    </section>
+
+    <!-- Wallet Balance -->
+    <section class="card">
+      <h2>Check Wallet Balance</h2>
+      <form id="balanceForm">
+        <input type="text" id="balance_wallet_address" placeholder="Wallet Address" required />
+        <button type="submit">Check Balance</button>
+      </form>
+      <div id="balanceOutput" class="output"></div>
+    </section>
+
+    <!-- Blockchain Validation -->
+    <section class="card">
+      <h2>Validate Blockchain</h2>
+      <button id="validateBlockchainBtn">Validate</button>
+      <div id="validateOutput" class="output"></div>
+    </section>
+
+    <!-- Show Blockchain -->
+    <section class="card">
+      <h2>Show Blockchain</h2>
+      <button id="showBlockchainBtn">Show Blockchain</button>
+      <pre id="blockchainOutput" class="output json-box"></pre>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

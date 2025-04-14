@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Send Transaction</h2>
+    <input type="text" id="sender" placeholder="Sender Wallet">
+    <input type="text" id="recipient" placeholder="Recipient Wallet">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="sendTransaction()">Send</button>
+    <p id="transaction-status"></p>
+
+    <script>
+        function sendTransaction() {
+            let sender = document.getElementById("sender").value;
+            let recipient = document.getElementById("recipient").value;
+            let amount = document.getElementById("amount").value;
+
+            fetch("/send_transaction", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ sender, recipient, amount })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("transaction-status").innerText = data.message || data.error;
+            });
+        }
+    </script>
+{% endblock %}

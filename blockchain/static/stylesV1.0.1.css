@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary-color: #5A67D8;       /* Soft Indigo */
+  --secondary-color: #48BB78;     /* Fresh Green */
+  --background-color: #00000;    /* Light Gray */
+  --card-background: #ffffff;     /* Pure White */
+  --input-background: #edf2f7;    /* Very Light Gray */
+  --text-color: #2d3748;          /* Dark Grayish */
+  --border-color: #e2e8f0;        /* Soft Border */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s;
+}
+
+/* Global reset and box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+/* Container styling */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #718096;
+}
+
+/* Card sections */
+.card {
+  background: var(--card-background);
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Form elements */
+form input, form button {
+  font-size: 1rem;
+}
+
+form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-background);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(90, 103, 216, 0.3);
+}
+
+/* Buttons */
+button {
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 30px;
+  margin: 10px 5px 0 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  font-weight: 500;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+button:hover {
+  background: #4c51bf;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Secondary button style */
+button.secondary {
+  background: var(--secondary-color);
+}
+
+button.secondary:hover {
+  background: #38a169;
+}
+
+/* Output containers */
+.output {
+  background: #edf2f7;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  overflow-x: auto;
+}
+
+/* Table styling for JSON data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+table th {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Pretty JSON display for blockchain output */
+.json-box {
+  background: #2d3748;
+  color: #48bb78;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+
+#stles v1.0.20
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #1abc9c;       /* Vibrant teal */
+  --secondary-color: #16a085;     /* Deep teal */
+  --accent-color: #f39c12;        /* Bold accent */
+  --background-gradient-start: #bdc3c7;
+  --background-gradient-end: #2c3e50;
+  --container-bg: #ecf0f1;        /* Light container background */
+  --card-bg: #ffffff;             /* Pure white for cards */
+  --text-color: #2c3e50;          /* Dark text */
+  --border-color: #bdc3c7;        /* Soft border */
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+  color: var(--text-color);
+}
+
+/* Container styling */
+.container {
+  max-width: 960px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: var(--container-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
+
+/* Card sections */
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Form elements */
+form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fdfdfd;
+  font-size: 1rem;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(26, 188, 156, 0.4);
+}
+
+/* Buttons */
+button {
+  padding: 15px 30px;
+  margin: 10px 10px 0 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary-color);
+  cursor: pointer;
+  transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Secondary button style */
+button.secondary {
+  background: var(--accent-color);
+}
+
+button.secondary:hover {
+  background: #d35400;
+}
+
+/* Output containers */
+.output {
+  background: #f7f9fa;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Table styling for JSON data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+table th {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Pretty JSON display for blockchain output */
+.json-box {
+  background: #2c3e50;
+  color: #1abc9c;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+
+#stylesV1.0.3
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --accent-color: #00d4ff;               /* Vivid accent */
+  --text-color: #ffffff;                 /* Pure white text */
+  --card-bg: rgba(255, 255, 255, 0.1);     /* Transparent card background */
+  --container-bg: rgba(255, 255, 255, 0.05);/* Subtle container bg */
+  --border-color: rgba(255, 255, 255, 0.3); /* Light border */
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --transition-speed: 0.3s;
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Container styling with glass effect */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--container-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+  animation: slideIn 1s ease-in-out;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* Card sections with glassmorphism */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Form elements */
+form input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Buttons */
+button {
+  padding: 15px 30px;
+  margin: 10px 10px 0 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background: var(--accent-color);
+  cursor: pointer;
+  transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Secondary button style */
+button.secondary {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+button.secondary:hover {
+  background: var(--accent-color);
+}
+
+/* Output containers with glass effect */
+.output {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  overflow-x: auto;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Table styling for JSON data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+table th {
+  background: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Pretty JSON display for blockchain output */
+.json-box {
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--accent-color);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+#styles V1.0.5
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #101010;               /* Deep space black */
+  --primary-color: #1e90ff;          /* Dodger blue for accents */
+  --accent-color: #0abde3;           /* Lighter blue accent */
+  --card-bg: rgba(255, 255, 255, 0.05);/* Subtle translucent card */
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text-color: #e0e0e0;             /* Soft off-white text */
+  --shadow: 0 8px 30px rgba(30, 144, 255, 0.2);
+  --transition: 0.3s;
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Montserrat Mono', monospace;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container styling */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Headings */
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+  animation: pulse 2s infinite;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Form inputs */
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: border var(--transition), box-shadow var(--transition);
+}
+
+form input::placeholder {
+  color: #777;
+}
+
+form input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  margin: 10px 5px 0 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+  background: var(--primary-color);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-transform: uppercase;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+button.secondary {
+  background: var(--accent-color);
+}
+
+/* Output container */
+.output {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: left;
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.2);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+table th {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: 700;
+}
+
+/* JSON box styling */
+.json-box {
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { text-shadow: 0 0 10px var(--primary-color); }
+  50% { text-shadow: 0 0 20px var(--primary-color); }
+  100% { text-shadow: 0 0 10px var(--primary-color); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

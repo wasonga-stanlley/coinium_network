@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Blockchain</h2>
+    <button onclick="fetchBlockchain()">Load Blockchain</button>
+    <div id="blockchain"></div>
+
+    <script>
+        function fetchBlockchain() {
+            fetch("/get_chain")
+                .then(response => response.json())
+                .then(data => {
+                    let output = "<h3>Blockchain Data:</h3>";
+                    data.forEach(block => {
+                        output += `<p><b>Block #${block.block_index}</b> | Hash: ${block.hash}</p>`;
+                    });
+                    document.getElementById("blockchain").innerHTML = output;
+                });
+        }
+    </script>
+{% endblock %}

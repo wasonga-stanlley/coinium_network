@@ -1,0 +1,133 @@
+ ============================================================
+   COLOR THEME OPTIONS
+   ============================================================ 
+
+Option 1: Classic Dark Theme 
+
+:root {
+  --bg-color: #121212;       /* Background: deep black/dark gray */
+  --text-color: #ffffff;       /* Text: white */
+  --accent-color: #00acc1;     /* Accent: muted cyan/teal */
+}
+
+
+ Option 2: Light Theme 
+:root {
+  --bg-color: #ffffff;       /* Background: pure white */
+  --text-color: #333333;       /* Text: dark gray */
+  --accent-color: #00acc1;     /* Accent: soft blue */
+}
+*/
+
+ Option 3: Neon Theme 
+:root {
+  --bg-color: #000000;       /* Background: black */
+  --text-color: #39ff14;       /* Text: neon green */
+  --accent-color: #ff073a;     /* Accent: neon red */
+}
+*/
+
+ Option 4: Pastel Theme 
+:root {
+  --bg-color: #fce4ec;       /* Background: soft pastel pink */
+  --text-color: #333333;       /* Text: dark gray */
+  --accent-color: #a29bfe;     /* Accent: pastel lavender */
+}
+
+ Option 5: Material Design Theme 
+
+:root {
+  --bg-color: #fafafa;       /* Background: light gray/white */
+  --text-color: #212121;       /* Text: almost black */
+  --accent-color: #e91e63;     /* Accent: vibrant pink */
+}
+
+ Option 6: Cyberpunk / Futuristic Theme 
+:root {
+  --bg-color: #1e1e2f;       /* Background: very dark blue/gray */
+  --text-color: #ffffff;       /* Text: white */
+  --accent-color: #00d4ff;     /* Accent: electric blue */
+}
+
+Option 7: Glassmorphism Theme 
+:root {
+  --bg-color: rgba(255, 255, 255, 0.2);  /* Background: semi-transparent */
+  --text-color: #ffffff;                  /* Text: white */
+  --accent-color: #ff4081;                /* Accent: vivid pink */
+}
+
+Option 8: Nature-Inspired Theme 
+:root {
+  --bg-color: #2e3b4e;       /* Background: slate blue/gray */
+  --text-color: #e0e0e0;       /* Text: light gray */
+  --accent-color: #8bc34a;     /* Accent: forest green */
+}
+
+Option 9: Minimalist Theme 
+:root {
+  --bg-color: #f4f4f4;       /* Background: off-white */
+  --text-color: #222222;       /* Text: very dark gray */
+  --accent-color: #ff5722;     /* Accent: a single bold color (e.g., deep orange) */
+}
+
+Option 10: High Contrast Theme 
+:root {
+  --bg-color: #000000;       /* Background: black */
+  --text-color: #ffffff;       /* Text: white */
+  --accent-color: #ffeb3b;     /* Accent: bright yellow */
+}
+*/
+
+ ============================================================
+   FONT OPTIONS
+   ============================================================ 
+
+ Sans-Serif Fonts (Clean & Modern)
+   - Roboto, Open Sans, Lato, Montserrat, Poppins
+   Example:
+   font-family: 'Roboto', sans-serif;
+   
+
+ Serif Fonts (Classic & Elegant)
+   - Merriweather, Playfair Display, Georgia, Times New Roman
+   Example:
+   font-family: 'Merriweather', serif;
+   
+
+  Monospace Fonts (Technical & Code-Friendly)
+   - Fira Code, Source Code Pro, Inconsolata, IBM Plex Mono
+   Example:
+   font-family: 'Fira Code', monospace;
+ 
+Display / Futuristic Fonts
+   - Orbitron, Audiowide, Exo 2, Raleway Dots
+   Example:
+   font-family: 'Orbitron', sans-serif;
+
+ Script and Handwritten Fonts (For Unique Accents)
+   - Pacifico, Great Vibes, Dancing Script
+   Example:
+   font-family: 'Pacifico', cursive;
+
+Other Notable Options
+   - Nunito, Oxygen, Noto Sans
+   Example:
+   font-family: 'Nunito', sans-serif;
+
+ ============================================================
+   EXAMPLE USAGE
+   ============================================================ 
+
+Uncomment one of the color theme blocks above and then set your global font like so: 
+
+:root {
+  --bg-color: #1e1e2f;
+  --text-color: #ffffff;
+  --accent-color: #00d4ff;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}

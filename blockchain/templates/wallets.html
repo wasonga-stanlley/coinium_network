@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Create a Wallet</h2>
+    <button onclick="createWallet()">Generate Wallet</button>
+    <p id="wallet-info"></p>
+
+    <h2>Check Wallet Balance</h2>
+    <input type="text" id="wallet-address" placeholder="Enter Wallet Address">
+    <button onclick="getBalance()">Check Balance</button>
+    <p id="balance-info"></p>
+
+    <script>
+        function createWallet() {
+            fetch("/create_wallet", { method: "POST" })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("wallet-info").innerText = 
+                    `Address: ${data.wallet_address} | Seed: ${data.seed_phrase}`;
+            });
+        }
+
+        function getBalance() {
+            let walletAddress = document.getElementById("wallet-address").value;
+            fetch(`/wallet_balance/${walletAddress}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("balance-info").innerText = 
+                    `Balance: ${data.balance}`;
+            });
+        }
+    </script>
+{% endblock %}

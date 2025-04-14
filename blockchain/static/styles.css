@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo 2:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #1a1f24;
+  --primary-color: #ff5722; /* Bluish-green */
+  --accent-color: #ff5722;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --text-color: #dfe6e9;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --glass-blur: blur(12px);
+  --transition: 0.3s ease;
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: var(--bg-color);
+  /* background: url('coinium_network.jpg') no-repeat center center fixed;*/
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Containers */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Headings */
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+  animation: glowPulse 2s infinite alternate;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 6px var(--accent-color);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--glass-blur);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--accent-color);
+  animation: pulseCard 1.5s infinite alternate;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: border var(--transition), box-shadow var(--transition), background 0.3s ease;
+  backdrop-filter: var(--glass-blur);
+}
+
+form input::placeholder {
+  color: #95a5a6;
+}
+
+form input:focus {
+  border-color: var(--primary-color);
+  background: rgba(0, 201, 167, 0.1);
+  box-shadow: 0 0 12px var(--primary-color);
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  margin: 10px 5px 0 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+  background: var(--primary-color);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform var(--transition), box-shadow var(--transition), background 0.3s ease;
+  animation: glowPulse 3s infinite alternate;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--primary-color);
+  animation: neonPulse 2s infinite alternate;
+}
+
+button.secondary {
+  background: #00acc1;
+}
+
+/* Output Containers */
+.output {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  text-align: left;
+  overflow-x: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  backdrop-filter: var(--glass-blur);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+table th {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: 700;
+}
+
+/* JSON Box */
+.json-box {
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.3rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* ============================================================
+   Animations & Keyframes
+   ============================================================ */
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+  }
+  100% {
+    text-shadow: 0 0 15px var(--primary-color), 0 0 25px var(--primary-color);
+  }
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+  }
+}
+
+@keyframes pulseCard {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.015);
+  }
+}
