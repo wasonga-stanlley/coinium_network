@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: flask-blockchain-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    buildFilter:
+      paths:
+        - blockchain/**
+    rootDir: blockchain
