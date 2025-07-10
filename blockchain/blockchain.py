@@ -9,7 +9,7 @@ import threading
 import os
 import requests
 from colorama import Fore, Style, init
-from p2pnetworking2 import (
+from p2pnetworking import (
     start_server, broadcast, PEERS, send_message, add_peer, remove_peer,
     list_peers, save_peers, load_peers, broadcast_peer_list, ping_peers,
     setup_nat_traversal, generate_ssl_cert, get_validators
